@@ -62,12 +62,12 @@ return $retorno;
 		$esta = false;
 		foreach ($arrayAutos as $auto) {
 			
-
+			
 			if($auto[0]!="")
 			if($auto[0]==$patente) // COMPARO SI EL AUTO QUE INGRESE EN EL TEXTBOX ESTA EN EL TXT
 			{
 
-				
+				$auto[2]= trim($auto[2]);
 				unlink("Fotitos/$auto[2]");
 				$esta = true; 
 				$tiempo = strtotime($hora) - strtotime($auto[1]); // RESTO LA FECHA ACTUAL CON EL TIEMPO ESTACIONADO
